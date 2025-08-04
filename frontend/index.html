@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intern Portal - Login/Signup</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@media (max-width: 600px) {
+  .card, .login-box, table { padding: 12px; width: 100%; }
+  nav { flex-direction: column; align-items: flex-start;}
+  .rewards-list { flex-direction: column; }
+}
+  body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: linear-gradient(135deg, #e0ecfc 0%, #ffffff 100%);
+    margin: 0;
+    min-height: 100vh;
+    color: #222;
+  }
+  .card {
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(60,100,200,0.09);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s;
+  }
+  .card:hover { box-shadow: 0 12px 32px rgba(60,100,200,0.19);}
+  h1, h2 { letter-spacing: 2px; }
+  nav {
+    margin-bottom: 30px;
+    background: #eaf2fb;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #cce1fd55;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  nav a {
+    font-weight: bold;
+    color: #2074F0;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 7px 18px;
+    border-radius: 8px;
+  }
+  nav a:hover {
+    color: #fff;
+    background: linear-gradient(90deg, #36c3f3, #286ef7);
+    box-shadow: 0 2px 8px #80d8ff44;
+  }
+
+
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f5f5f5; }
+  .login-box {
+    background: linear-gradient(120deg, #24C6DC 0%, #6C47FF 100%);
+    color: #fff;
+    box-shadow: 0 14px 38px rgba(60,70,190,0.18);
+    padding: 46px 40px 35px 40px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    margin: 45px auto;
+  }
+  .login-box h2 { color: #fff; }
+  .login-box input {
+    margin: 15px 0;
+    padding: 12px 1px 12px 12px;
+    border-radius: 9px;
+    border: none;
+    width: 97%;
+    font-size: 1.08rem;
+    background: #fff;
+    color: #232526;
+    transition: outline 0.2s;
+  }
+  .login-box input:focus {
+    outline: 2px solid #24C6DC;
+  }
+  .login-box button {
+    margin-top: 18px;
+    background: linear-gradient(90deg, #24C6DC, #6C47FF);
+    border: none;
+    color: #fff;
+    padding: 12px 0;
+    width: 102%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.14rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 12px #6C47FF44;
+    transition: background 0.18s, transform 0.1s;
+  }
+  .login-box button:hover {
+    background: linear-gradient(90deg, #6C47FF 0%, #24C6DC 100%);
+    color: #fff;
+    transform: scale(1.03);
+  }
+
+
+  </style>
+  
+</head>
+<body>
+  <div class="login-box">
+    <h2>Intern Portal</h2>
+    <input type="text" placeholder="Username" id="username" />
+    <input type="password" placeholder="Password" id="password" />
+    <button onclick="login()">Login / Signup</button>
+  </div>
+
+  <script>
+    function login() {
+      // Since no real auth, just redirect to dashboard on click
+      window.location.href = 'dashboard.html';
+      function login() {
+  const username = document.getElementById("username").value || "Guest";
+  localStorage.setItem('internName', username);
+  window.location.href = 'dashboard.html';
+}
+    }
+  </script>
+</body>
+</html>
