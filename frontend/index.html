@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Intern Portal - Login/Signup</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(135deg, #232526 0%, #6C47FF 100%);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-box {
+      background: linear-gradient(120deg, #24C6DC 0%, #6C47FF 100%);
+      box-shadow: 0 14px 38px rgba(60,70,190,0.18);
+      padding: 46px 40px 35px 40px;
+      border-radius: 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 350px;
+    }
+    .login-box h2 {
+      margin: 0 0 20px 0;
+    }
+    .login-box input {
+      margin: 15px 0;
+      padding: 12px 1px 12px 12px;
+      border-radius: 9px;
+      border: none;
+      width: 97%;
+      font-size: 1.08rem;
+    }
+    .login-box input:focus {
+      outline: 2px solid #24C6DC;
+    }
+    .login-box button {
+      margin-top: 18px;
+      background: linear-gradient(90deg, #24C6DC, #6C47FF);
+      border: none;
+      color: #fff;
+      padding: 12px 0;
+      width: 102%;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.14rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 3px 12px #6C47FF44;
+      transition: background 0.18s, transform 0.1s;
+    }
+    .login-box button:hover {
+      background: linear-gradient(90deg, #6C47FF 0%, #24C6DC 100%);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Intern Portal</h2>
+    <input type="text" placeholder="Username" id="username" />
+    <input type="password" placeholder="Password" id="password" />
+    <button onclick="login()">Login / Signup</button>
+  </div>
+
+  <script>
+    function login() {
+      const username = document.getElementById("username").value || "Guest";
+      localStorage.setItem('internName', username);
+      window.location.href = 'dashboard.html';
+    }
+  </script>
+</body>
+</html>
